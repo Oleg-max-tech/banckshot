@@ -7,12 +7,12 @@ import GameScreen from "./Screens/GameScreen/Modal Window/GameScreen";
 export default function App() {
   const [bullets, setBullets] = useState(0); // Кількість бойових патронів
   const [blanks, setBlanks] = useState(0); // Кількість холостих патронів
-  const [currentScreen, setCurrentScreen] = useState<"setup" | "game">("setup"); // Поточний екран
+  const [currentScreen, setCurrentScreen] = useState<"setup" | "game">("setup");
 
   // Функція для старту гри
   const startGame = () => {
-    const randomBullets = Math.floor(Math.random() * 9); // Випадкова кількість бойових патронів від 0 до 8
-    const randomBlanks = 8 - randomBullets; // Залишкові патрони будуть холостими
+    const randomBullets = Math.floor(Math.random() * 9);
+    const randomBlanks = 8 - randomBullets;
     setBullets(randomBullets);
     setBlanks(randomBlanks);
     setCurrentScreen("game");
